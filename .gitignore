@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+data/
+oof/
+submissions/
+logs/
+catboost_info/
+
+kaggle.json
