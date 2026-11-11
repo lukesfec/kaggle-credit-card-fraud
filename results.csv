@@ -1,0 +1,18 @@
+time,name,cv_auc,notes
+2026-11-10T18:32:24,lr,0.941825,"C=1, log1p skewed, one-hot cats"
+2026-11-10T18:34:46,xgb,0.946419,"raw features, lr=0.03, depth=6, GPU"
+2026-11-10T18:35:29,lgb,0.946335,"raw features, lr=0.03, leaves=63"
+2026-11-10T18:38:32,cat,0.94548,"raw features, lr=0.05, depth=6, GPU"
+2026-11-10T18:38:45,blend_rankavg,0.946663,lr+lgb+xgb+cat
+2026-11-10T18:39:06,blend_weighted,0.946897,lr=0.087 lgb=0.377 xgb=0.371 cat=0.165
+2026-11-10T18:39:08,blend_stack,0.946791,lr+lgb+xgb+cat
+2026-11-10T18:54:13,lr_fe_network+cvv+amount+riskcount,0.942049,"feature groups: ['network', 'cvv', 'amount', 'riskcount']"
+2026-11-10T18:54:14,xgb_fe_network+cvv+amount+riskcount,0.946596,"feature groups: ['network', 'cvv', 'amount', 'riskcount']"
+2026-11-10T18:54:38,lr_fe_network,0.94188,feature groups: ['network']
+2026-11-10T18:54:42,xgb_fe_network,0.946457,feature groups: ['network']
+2026-11-10T18:55:05,lr_fe_cvv,0.941937,feature groups: ['cvv']
+2026-11-10T18:55:12,xgb_fe_cvv,0.9465,feature groups: ['cvv']
+2026-11-10T18:55:30,lr_fe_amount,0.941899,feature groups: ['amount']
+2026-11-10T18:55:41,xgb_fe_amount,0.94647,feature groups: ['amount']
+2026-11-10T18:55:57,lr_fe_riskcount,0.941785,feature groups: ['riskcount']
+2026-11-10T18:56:07,xgb_fe_riskcount,0.946648,feature groups: ['riskcount']
